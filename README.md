@@ -106,6 +106,11 @@ python3 -m unittest discover -s tests -v
 
 36 unit tests over the pure logic (parsing, profile loading, command construction). Tests never touch system power settings.
 
+## Roadmap
+
+- **Timed modes** — apply a mode for a fixed duration ("keep awake for 4 hours"), then automatically restore the previous mode / defaults. No more remembering to run `restore`.
+- **Runtime estimation** — estimate how long the current mode can keep running, based on live charge/discharge power, battery capacity and health (cycle count, design vs. full-charge capacity), so you know whether the battery can survive the task before you commit to it.
+
 ## Design docs
 
 - [CLI design](docs/2026-09-13-batteryctl-design.md)
