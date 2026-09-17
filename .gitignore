@@ -12,3 +12,6 @@ batteryctl/snapshots/
 *.app/
 *.o
 charger-info
+
+# build cache
+batteryctl/.build/
