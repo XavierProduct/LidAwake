@@ -1,0 +1,9 @@
+{
+  "name": "awake",
+  "description": "外接屏合盖做端到端测试并截图（需外接屏 + 屏幕录制权限）",
+  "requires": ["external_display", "screen_recording"],
+  "warn": "disablesleep 是全局设置，不区分插电。拔电后合盖放包里会持续运行、发热耗电，用完请执行 restore 或 apply default。",
+  "global": { "disablesleep": 1 },
+  "battery": { "displaysleep": 2, "sleep": 1, "disksleep": 10, "womp": 0 },
+  "ac": { "displaysleep": 0, "sleep": 0, "disksleep": 10, "womp": 1 }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "default",
+  "description": "日常使用，该睡就睡（含插电），等同 Apple 出厂默认",
+  "requires": [],
+  "warn": null,
+  "global": { "disablesleep": 0 },
+  "battery": { "displaysleep": 2, "sleep": 1, "disksleep": 10, "womp": 0 },
+  "ac": { "displaysleep": 10, "sleep": 1, "disksleep": 10, "womp": 1 }
+}

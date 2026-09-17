@@ -1,0 +1,9 @@
+{
+  "name": "background",
+  "description": "合盖跑长任务：合盖不睡、屏幕尽快关闭，脚本继续运行",
+  "requires": [],
+  "warn": "disablesleep 是全局设置，不区分插电。拔电后合盖放包里会持续运行、发热耗电，用完请执行 restore 或 apply default。",
+  "global": { "disablesleep": 1 },
+  "battery": { "displaysleep": 2, "sleep": 1, "disksleep": 10, "womp": 0 },
+  "ac": { "displaysleep": 0, "sleep": 0, "disksleep": 10, "womp": 1 }
+}

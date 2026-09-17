@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# runtime snapshots (machine-specific)
+batteryctl/snapshots/
+
+# build artifacts
+*.app/
+*.o
+charger-info
