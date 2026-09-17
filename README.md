@@ -32,15 +32,15 @@ LidAwake wraps all of this into safe, named modes with automatic snapshots and r
 
 ## Quick start
 
-### 1. One-shot (simplest)
+### 1. Download the release (recommended)
 
-```bash
-sudo bash lidawake.sh apply    # lid closed = stays awake (AC: no idle sleep either)
-bash lidawake.sh show          # read-only status, no sudo needed
-sudo bash lidawake.sh restore  # back to Apple factory defaults
-```
+Grab the latest app from [**Releases**](https://github.com/XavierProduct/LidAwake/releases/latest):
 
-### 2. batteryctl (recommended)
+1. Download `BatteryCtl-macOS-arm64.zip` and unzip
+2. First launch: right-click the app → **Open** (it is ad-hoc signed only, so a plain double-click gets blocked by Gatekeeper), or run `xattr -cr BatteryCtl.app` in Terminal
+3. Applying a mode prompts once for your admin password — `pmset` requires root
+
+### 2. batteryctl CLI (from source)
 
 ```bash
 cd batteryctl
@@ -58,7 +58,15 @@ sudo python3 batteryctl.py apply default      # back to normal
 sudo python3 batteryctl.py restore
 ```
 
-### 3. Optional: the GUI
+### 3. One-shot script (simplest, no Python needed)
+
+```bash
+sudo bash lidawake.sh apply    # lid closed = stays awake (AC: no idle sleep either)
+bash lidawake.sh show          # read-only status, no sudo needed
+sudo bash lidawake.sh restore  # back to Apple factory defaults
+```
+
+### 4. Build the GUI yourself
 
 ```bash
 cd batteryctl/app

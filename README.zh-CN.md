@@ -32,15 +32,15 @@ LidAwake 把这些收敛成命名的电源模式：切换前自动快照、可�
 
 ## 快速开始
 
-### 1. 一条命令版（最简单）
+### 1. 下载 Release（推荐）
 
-```bash
-sudo bash lidawake.sh apply    # 合盖不睡（插电时空闲也不睡）
-bash lidawake.sh show          # 只看状态，不需要 sudo
-sudo bash lidawake.sh restore  # 还原为 Apple 出厂默认
-```
+到 [**Releases**](https://github.com/XavierProduct/LidAwake/releases/latest) 下载最新版：
 
-### 2. batteryctl（推荐）
+1. 下载 `BatteryCtl-macOS-arm64.zip` 并解压
+2. 首次打开：右键 App → **打开**（仅 ad-hoc 签名，直接双击会被 Gatekeeper 拦），或终端执行 `xattr -cr BatteryCtl.app`
+3. 点「应用」切换模式时会弹一次管理员密码框——`pmset` 需要 root
+
+### 2. batteryctl 命令行（源码运行）
 
 ```bash
 cd batteryctl
@@ -58,7 +58,15 @@ sudo python3 batteryctl.py apply default      # 恢复日常
 sudo python3 batteryctl.py restore
 ```
 
-### 3. 图形界面（可选）
+### 3. 一条命令版（最简单，无需 Python）
+
+```bash
+sudo bash lidawake.sh apply    # 合盖不睡（插电时空闲也不睡）
+bash lidawake.sh show          # 只看状态，不需要 sudo
+sudo bash lidawake.sh restore  # 还原为 Apple 出厂默认
+```
+
+### 4. 自行构建图形界面
 
 ```bash
 cd batteryctl/app
